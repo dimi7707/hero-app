@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { urlBuilderAuth } from '../marvel-api/seutp-api'
+	import { urlBuilderAuth } from '../marvel-api/seutp-api';
 	import { onMount } from 'svelte';
 	import GridCard from '../components/grid-card/grid-card.svelte';
 	import { characterListSerializer } from '../marvel-api/serializers/character-list-serializer';
