@@ -2,12 +2,20 @@
   export let elementsList: Array<any>;
   import Card from '../card/card.svelte';
 
+  console.log('el contenido de la variable elementsList es: ', elementsList);
+
 </script>
 
-<div class="grid grid-cols-4 gap-4">
+<div class="grid grid-cols-3 gap-3">
   {#each elementsList as elem}
-    <div  >
-      <Card title="Titulo de prueba por ahora" />
+    <div>
+      <Card
+        id={ elem.id }
+        title={ elem.name }
+        description={ elem.description }
+        image={ elem.image }
+        tagList={ elem.tagList }
+      />
     </div>
   {/each}
 </div>
