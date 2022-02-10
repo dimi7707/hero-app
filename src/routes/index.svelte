@@ -9,7 +9,8 @@
 	let fetchingData = true;
 
 	onMount(async () => {
-		const urlService = urlBuilderAuth(`v1/public/characters`);
+		const randomOffset = Math.floor(Math.random() * 1000);
+		const urlService = urlBuilderAuth(`v1/public/characters`, 70, randomOffset);
 		const res = await fetch(urlService);
 		characterList = await res.json();
 		fetchingData = false;
