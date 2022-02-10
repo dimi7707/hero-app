@@ -10,7 +10,8 @@
 
 	onMount(async () => {
 		const randomOffset = Math.floor(Math.random() * 1000);
-		const urlService = urlBuilderAuth(`v1/public/characters`, 70, randomOffset);
+		const defaultLimit = 50;
+		const urlService = urlBuilderAuth(`v1/public/characters`, defaultLimit, randomOffset);
 		const res = await fetch(urlService);
 		characterList = await res.json();
 		fetchingData = false;
