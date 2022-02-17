@@ -1,12 +1,8 @@
 <script lang="ts">
-  export let id;
-  export let image;
-  export let title: string;
-  export let description;
-  export let tagList;
-  import { page } from '$app/stores';
+  export let profileData: CharacterProfile;
+  import type {CharacterProfile} from '../../types/character-profile';
 
-  console.log("Hello World, I am a card");
+  const { id, image, name:title, description, tagList } = profileData;
 
   const setIdCurrentHero = () => {
     localStorage.idCharacter = id;
